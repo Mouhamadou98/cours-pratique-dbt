@@ -16,7 +16,7 @@ Try running the following commands:
 - Check out JA DATATECH CONSULTING youtub channel
 
 
-## WORKFLOWS
+### WORKFLOWS
 
 In the first step, we need to create a GitHub repository and install dbt on our local environment.
 
