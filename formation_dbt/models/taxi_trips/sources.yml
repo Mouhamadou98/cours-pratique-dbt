@@ -1,0 +1,9 @@
+version : 2 # indique la version du format de fichier YAML utilisé par dbt
+sources : 
+  - name : tlc_taxi_trips # nom de la source de données
+    meta : 
+      external_location : >  
+        (FROM read_parquet(list_transform(range(1, 13), m -> 'https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2024-' || lpad(m::text,2,'0') || '.parquet')))
+      formatter : oldstyle # format des données
+    tables :
+      - name :  raw_yellow_trips_data # nom de la table dans la source de données

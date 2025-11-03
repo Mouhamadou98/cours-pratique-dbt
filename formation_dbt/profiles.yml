@@ -1,0 +1,7 @@
+formation_dbt:
+  target: dev # l'environnement par défaut à utiliser
+  outputs:
+    dev:
+      type: duckdb
+      path: './output/transformed_data.db' # chemin vers le fichier DuckDB
+      schema: 'main' # schéma par défaut dans DuckDB
