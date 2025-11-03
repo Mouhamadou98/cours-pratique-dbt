@@ -26,13 +26,13 @@ python3 -m venv .venv
 Then I installed dbt-duckdb (to connect dbt to DuckDB).
 I’m working on macOS, and I also installed DuckDB via Homebrew.
 
-### 1. Initialize the project
+### 1. INITIALIZE THE PROJECT
 
 Run:
 dbt init formation_dbt
 This command automatically creates a new directory for your project.
-
-### 2. Create the profiles.yml file
+ 
+### 2. CREATE THE profiles.yml file 
 
 Inside the formation_dbt directory, create a profiles.yml file.
 In this file, we’ll configure the connection parameters for our deployment target (like DuckDB).
@@ -40,18 +40,18 @@ In this file, we’ll configure the connection parameters for our deployment tar
 In the dbt_project.yml file, there’s a key called profile with the value formation_dbt.
 Copy this value and use it in your profiles.yml file.
 
-### 3. Debug the connection
+### 3. DEBUG THE CONNECTION
 
 Run:
 dbt debug
 This command validates that your connection is properly configured.
 
-### 4. Create the sources and transformations
+### 4. CREATE THE SOURCE AND TRANSFORMATION
 
 Create a sources.yml file (to define your data sources) and a transformation file such as transform.sql.
 In transform.sql, we’ll write our transformations (for example, using CTEs).
 
-### 5. Tests
+### 5. TESTS
 
 dbt natively includes testing capabilities to ensure our transformations are correct.
 To set this up, create a packages.yml file and define the required packages (check the file for details).
@@ -63,7 +63,7 @@ to install dependencies.
 After that, create a schema.yml file to define your tests.
 You can also write custom tests if needed.
 
-### 6. Save transformations as a Parquet file
+### 6. SAVE TRANSFORMATIONS AS A PARQUET FILE
 
 Check the top of the transform.sql file to see how to export the results as a Parquet file.
 
